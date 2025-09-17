@@ -29,20 +29,34 @@
 		DF0211A62E70A4710069B663 /* ccantiquesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ccantiquesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DFE27F282E79DD820040AC3B /* Exceptions for "ChantLouange" folder in "ccantiques" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SplashScreenView.swift,
+				Untitled.swift,
+			);
+			target = DF02118B2E70A46F0069B663 /* ccantiques */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DF02118E2E70A46F0069B663 /* ccantiques */ = {
+		DF02118E2E70A46F0069B663 /* ChantLouange */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ccantiques;
+			exceptions = (
+				DFE27F282E79DD820040AC3B /* Exceptions for "ChantLouange" folder in "ccantiques" target */,
+			);
+			path = ChantLouange;
 			sourceTree = "<group>";
 		};
-		DF02119F2E70A4710069B663 /* ccantiquesTests */ = {
+		DF02119F2E70A4710069B663 /* ChantLouangeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ccantiquesTests;
+			path = ChantLouangeTests;
 			sourceTree = "<group>";
 		};
-		DF0211A92E70A4710069B663 /* ccantiquesUITests */ = {
+		DF0211A92E70A4710069B663 /* ChantLoangeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ccantiquesUITests;
+			path = ChantLoangeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +89,9 @@
 		DF0211832E70A46F0069B663 = {
 			isa = PBXGroup;
 			children = (
-				DF02118E2E70A46F0069B663 /* ccantiques */,
-				DF02119F2E70A4710069B663 /* ccantiquesTests */,
-				DF0211A92E70A4710069B663 /* ccantiquesUITests */,
+				DF02118E2E70A46F0069B663 /* ChantLouange */,
+				DF02119F2E70A4710069B663 /* ChantLouangeTests */,
+				DF0211A92E70A4710069B663 /* ChantLoangeUITests */,
 				DF02118D2E70A46F0069B663 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,7 +122,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DF02118E2E70A46F0069B663 /* ccantiques */,
+				DF02118E2E70A46F0069B663 /* ChantLouange */,
 			);
 			name = ccantiques;
 			packageProductDependencies = (
@@ -131,7 +145,7 @@
 				DF02119E2E70A4710069B663 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				DF02119F2E70A4710069B663 /* ccantiquesTests */,
+				DF02119F2E70A4710069B663 /* ChantLouangeTests */,
 			);
 			name = ccantiquesTests;
 			packageProductDependencies = (
@@ -154,7 +168,7 @@
 				DF0211A82E70A4710069B663 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				DF0211A92E70A4710069B663 /* ccantiquesUITests */,
+				DF0211A92E70A4710069B663 /* ChantLoangeUITests */,
 			);
 			name = ccantiquesUITests;
 			packageProductDependencies = (
@@ -186,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DF0211872E70A46F0069B663 /* Build configuration list for PBXProject "ccantiques" */;
+			buildConfigurationList = DF0211872E70A46F0069B663 /* Build configuration list for PBXProject "ChantLouange" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -393,22 +407,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ccantiques/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 18;
+				DEVELOPMENT_ASSET_PATHS = "\"ChantLouange/Preview Content\"";
 				DEVELOPMENT_TEAM = X5SJV446UG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chant & Louange";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.alivecorp.ccantiques;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -422,23 +440,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ccantiques/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 18;
+				DEVELOPMENT_ASSET_PATHS = "\"ChantLouange/Preview Content\"";
 				DEVELOPMENT_TEAM = X5SJV446UG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chant & Louange";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.alivecorp.ccantiques;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.alivecorp.chantlouange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -521,7 +543,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DF0211872E70A46F0069B663 /* Build configuration list for PBXProject "ccantiques" */ = {
+		DF0211872E70A46F0069B663 /* Build configuration list for PBXProject "ChantLouange" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF0211AE2E70A4710069B663 /* Debug */,

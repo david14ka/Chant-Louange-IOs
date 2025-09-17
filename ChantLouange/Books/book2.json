@@ -1,0 +1,44 @@
+{
+  "title": "Chant de Victoire",
+  "author": "Author B",
+  "songs": [
+      {
+          "title": "Grand Dieu Nous te Benissons",
+          "number": "1",
+          "content": "1.Grand Dieu, nous te bénissons, \nNous célébrons tes louanges!
+          Eternel, nous t'exaltons,
+          De concert avec les anges,
+           { Et prosternés devant toi,
+          Nous t'adorons, ô grand Roi!} bis
+             
+          2.Les saints et les bienheureux,
+          Les trônes et les puissances,
+          Toutes les vertus des cieux
+          Disent tes magnificences,
+          { Proclamant dans leurs concerts
+          Le grand Dieu de l'Univers.  }  bis
+             
+          3.Saint, saint, saint, est l'Eternel,
+          Le seigneur, Dieu des armées;
+          Son pouvoir est immortel;
+          Ses oeuvres partout semées
+          { Font éclater sa grandeur,
+          Sa majesté, sa splendeur } bis
+             
+          4.Sauve, ton peuple, Seigneur,
+          Et bénis ton héritage;
+          Que ta gloire et ta splendeur
+          Soient à jamais son partage,
+          { Conduis-le par ton amour
+          Jusqu'au céleste séjour! } bis
+             
+          5.Gloire soit au Saint-Esprit!
+          Gloire soit à Dieu le Père!
+          Gloire soit à Jésus-Christ,
+          Notre Sauveur, notre Frère!
+          { Son immense charité
+          Dure à perpétuité. } bis"
+      },
+    { "title": "Song 2", "number": "2", "content": "Second song content..." }
+  ]
+}
