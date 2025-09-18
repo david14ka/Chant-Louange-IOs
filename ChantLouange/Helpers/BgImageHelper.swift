@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BgImageGradient : View {
-    let image: String
+    var image: String = "bg"
     
     var body: some View {
         return ZStack {

@@ -91,7 +91,7 @@ func parseMarkdownLike(_ content: String) -> [Text] {
         // Text before bold
         let before = remaining[..<startRange.lowerBound]
         if !before.isEmpty {
-            result.append(Text(String(before)))
+            result.append(Text(String(before)).foregroundColor(Color(.white)))
         }
         
         // Look for closing *
@@ -103,7 +103,7 @@ func parseMarkdownLike(_ content: String) -> [Text] {
             remaining = remaining[endRange.upperBound...]
         } else {
             // No closing **, just treat rest as normal
-            result.append(Text(String(remaining)))
+            result.append(Text(String(remaining)).foregroundColor(Color(.white)))
             break
         }
     }
@@ -251,7 +251,7 @@ extension String {
                 // Add text before match as normal
                 if lastIndex < range.lowerBound {
                     let normalText = String(self[lastIndex..<range.lowerBound])
-                    result.append(Text(normalText))
+                    result.append(Text(normalText).foregroundColor(Color(.white)))
                 }
                 
                 // Add matched block with custom style
@@ -264,7 +264,7 @@ extension String {
             // Add remaining text
             if lastIndex < self.endIndex {
                 let remaining = String(self[lastIndex..<self.endIndex])
-                result.append(Text(remaining))
+                result.append(Text(remaining).foregroundColor(Color(.white)))
             }
             
         } catch {

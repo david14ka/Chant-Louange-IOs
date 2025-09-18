@@ -29,23 +29,9 @@
 		DF0211A62E70A4710069B663 /* ccantiquesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ccantiquesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DFE27F282E79DD820040AC3B /* Exceptions for "ChantLouange" folder in "ccantiques" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				SplashScreenView.swift,
-				Untitled.swift,
-			);
-			target = DF02118B2E70A46F0069B663 /* ccantiques */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DF02118E2E70A46F0069B663 /* ChantLouange */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				DFE27F282E79DD820040AC3B /* Exceptions for "ChantLouange" folder in "ccantiques" target */,
-			);
 			path = ChantLouange;
 			sourceTree = "<group>";
 		};
@@ -113,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF0211B02E70A4710069B663 /* Build configuration list for PBXNativeTarget "ccantiques" */;
 			buildPhases = (
+				DF7B96EB2E7C888100E5AD3D /* Build Version from Git by David14Ka */,
 				DF0211882E70A46F0069B663 /* Sources */,
 				DF0211892E70A46F0069B663 /* Frameworks */,
 				DF02118A2E70A46F0069B663 /* Resources */,
@@ -244,6 +231,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF7B96EB2E7C888100E5AD3D /* Build Version from Git by David14Ka */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Version from Git by David14Ka";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# # Get total number of commits in the repo\nbuildNumber=$(git rev-list --count HEAD)\n\n# Update Info.plist CFBundleVersion with commit count\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n\necho \"Build number set to $buildNumber\"Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF0211882E70A46F0069B663 /* Sources */ = {
@@ -409,7 +417,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"ChantLouange/Preview Content\"";
 				DEVELOPMENT_TEAM = X5SJV446UG;
 				ENABLE_PREVIEWS = YES;
@@ -426,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.alivecorp.ccantiques;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -442,7 +450,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"ChantLouange/Preview Content\"";
 				DEVELOPMENT_TEAM = X5SJV446UG;
 				ENABLE_PREVIEWS = YES;
@@ -459,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.alivecorp.chantlouange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

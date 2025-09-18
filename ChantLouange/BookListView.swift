@@ -18,16 +18,28 @@ struct BookListView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(bookData.books) { book in
-                        NavigationLink(destination: SongListView(book: book)) {
-                            BookCardView(book: book)
+            
+            ZStack() {
+                // Background image
+                // Gradient overlay
+                
+                VStack{
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(bookData.books) { book in
+                                NavigationLink(destination: SongListView(book: book)) {
+                                    BookCardView(book: book)
+                                }
+                                .buttonStyle(.plain)
+                            }
                         }
-                        .buttonStyle(.plain)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 20)
                     }
+                    .background(BgImageGradient())
+                    
                 }
-                .padding()
+                
             }
             .navigationTitle("Receuils")
         }
