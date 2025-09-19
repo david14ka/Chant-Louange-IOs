@@ -32,6 +32,12 @@ struct BookListView: View {
                                 }
                                 .buttonStyle(.plain)
                             }
+                            //More books option to view other books not include in main page
+                            NavigationLink(destination: MoreBookListViewSimple(bookData: bookData)) {
+                                BookCardView(book: Book.MoreBook(), cardAlignment: .center)
+                            }
+                            .buttonStyle(.plain)
+                            
                         }
                         .padding(.horizontal, 16)
                         .padding(.vertical, 20)
@@ -48,10 +54,11 @@ struct BookListView: View {
 
 struct BookCardView: View {
     let book: Book
+    var cardAlignment: Alignment = .bottom
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            // Background image (replace with actual images in Assets)
+        ZStack(alignment: cardAlignment) {
+            // Background image
             Image(book.author.replacingOccurrences(of: " ", with: ""))
                 .resizable()
                 .scaledToFill()
@@ -61,7 +68,7 @@ struct BookCardView: View {
             
             // Gradient overlay for readability
             LinearGradient(
-                gradient: Gradient(colors: [Color.black.opacity(0.6), Color.clear]),
+                gradient: Gradient(colors: [Color.black.opacity(1), Color.clear]),
                 startPoint: .bottom,
                 endPoint: .top
             )
@@ -87,18 +94,21 @@ struct BookCardView: View {
 }
 
 // not used
-struct BookListViewSimple: View {
+struct MoreBookListViewSimple: View {
     @ObservedObject var bookData: BookData
 
     var body: some View {
         NavigationStack {
-            List(bookData.books) { book in
-                NavigationLink(book.title) {
-                    SongListView(book: book)
-                }
+            ZStack{
+                List(bookData.books) { book in
+                    NavigationLink(book.title) {
+                        SongListView(book: book)
+                    }
+                }.textCase(.uppercase)
+                .scrollContentBackground(.hidden) // Hides default List background
             }
-            
-            .navigationTitle("Receuils")
+            .background(BgImageGradient())
+            .navigationTitle("More Books")
         }
     }
 }

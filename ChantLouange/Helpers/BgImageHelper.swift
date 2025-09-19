@@ -20,7 +20,7 @@ struct BgImageGradient : View {
             LinearGradient(
                 gradient: Gradient(colors: [
                     Color.black.opacity(0.6), // dark bottom
-                    Color.clear              // fade to transparent
+                    //Color.clear              // fade to transparent
                 ]),
                 startPoint: .bottom,
                 endPoint: .top

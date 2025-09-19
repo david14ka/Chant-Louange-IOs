@@ -14,4 +14,8 @@ struct Book: Identifiable, Codable {
     let songs: [Song]
     let id: Int
     //var id: UUID { UUID() }
+    
+    static public func MoreBook() -> Book{
+        return Book(title: "More ...", author: "bg", songs: [], id: 0)
+    }
 }

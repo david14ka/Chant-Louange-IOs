@@ -1,0 +1,11 @@
+{
+    "abbreviation": "More",
+    "author": "More",
+    "bookComingSoon": false,
+    "id": 8,
+    "image": "AN",
+    "title": "More book",
+    "songs": [
+        {"number": "1", "title": "More ...", "content": "This is not a book."}
+    ]
+}
