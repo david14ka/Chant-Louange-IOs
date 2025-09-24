@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct TabBooksView: View {
+    @ObservedObject var bookData: BookData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        BookListView(bookData: bookData)
     }
 }
 
 #Preview {
-    TabBooksView()
+    
+    TabBooksView(bookData: BookDataPreview(books: sampleBooks))
 }

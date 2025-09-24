@@ -27,14 +27,18 @@ struct BookListView: View {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(bookData.books) { book in
-                                NavigationLink(destination: SongListView(book: book)) {
-                                    BookCardView(book: book)
+                                
+                                if(!book.bookComingSoon){
+                                    
+                                    NavigationLink(destination: SongListView(book: book)) {
+                                        BookCardView(book: book)
+                                    }
+                                    .buttonStyle(.plain)
                                 }
-                                .buttonStyle(.plain)
                             }
                             //More books option to view other books not include in main page
                             NavigationLink(destination: MoreBookListViewSimple(bookData: bookData)) {
-                                BookCardView(book: Book.MoreBook(), cardAlignment: .center)
+                                BookCardView(book: Book.emptyBookData(), cardAlignment: .center)
                             }
                             .buttonStyle(.plain)
                             
@@ -90,6 +94,10 @@ struct BookCardView: View {
         .frame(width: 160, height: 180)
         .cornerRadius(16)
         .shadow(radius: 5)
+        .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.white, lineWidth: 1)
+                )
     }
 }
 
@@ -101,9 +109,13 @@ struct MoreBookListViewSimple: View {
         NavigationStack {
             ZStack{
                 List(bookData.books) { book in
-                    NavigationLink(book.title) {
-                        SongListView(book: book)
+                    
+                    if(book.bookComingSoon){
+                        NavigationLink(book.title) {
+                            SongListView(book: book)
+                        }
                     }
+                    
                 }.textCase(.uppercase)
                 .scrollContentBackground(.hidden) // Hides default List background
             }
@@ -115,17 +127,6 @@ struct MoreBookListViewSimple: View {
 
 // MARK: - Previews
 struct BookListView_Previews: PreviewProvider {
-    static let sampleBooks = [
-        Book(title: "Book One", author: "Author A", songs: [
-            Song(title: "Song 1", number: "1", content: "Sample content 1"),
-            Song(title: "Song 2", number: "2", content: "Sample content 2")
-        ], id: 1),
-        Book(title: "Book Two", author: "Author B", songs: [
-            Song(title: "Song 1", number: "1", content: "Sample content 1"),
-            Song(title: "Song 2", number: "2", content: "Sample content 2")
-        ], id: 2)
-    ]
-    
     static var previews: some View {
         BookListView(bookData: BookDataPreview(books: sampleBooks))
     }

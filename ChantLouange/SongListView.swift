@@ -33,7 +33,7 @@ struct SongListView: View {
                             Text("\(song.number)")
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.white)
                                 .frame(width: 40, alignment: .leading)
 
                             Text(song.title)
@@ -55,6 +55,7 @@ struct SongListView: View {
         .background(BgImageGradient())
         .navigationTitle(book.title)
         .searchable(text: $searchText, prompt: "Search songs")
+        .toolbar(.hidden, for: .tabBar)
     
     }
 }

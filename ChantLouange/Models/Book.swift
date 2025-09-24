@@ -11,11 +11,11 @@ struct Book: Identifiable, Codable {
     let title: String
     let author: String
     //var abbreviation : String
-    let songs: [Song]
+    var songs: [Song]
+    var bookComingSoon: Bool = true
     let id: Int
-    //var id: UUID { UUID() }
     
-    static public func MoreBook() -> Book{
-        return Book(title: "More ...", author: "bg", songs: [], id: 0)
+    static public func emptyBookData() -> Book{
+        return Book(title: "Other books", author: "NB-", songs: [], id: 0)
     }
 }

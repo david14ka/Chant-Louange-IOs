@@ -16,7 +16,7 @@ struct SplashScreenView: View {
     var body: some View {
         if isActive {
             // Navigate to main content
-            BookListView(bookData: BookData())
+            BookMainView(bookData: BookData())
         } else {
             
             ZStack {

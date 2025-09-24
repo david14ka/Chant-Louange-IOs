@@ -11,6 +11,8 @@ import SwiftUI
 struct SongDetailView: View {
     let book: Book
     let song: Song
+    @EnvironmentObject var favoriteManager: FavoriteManager
+
 
     var body: some View {
         ScrollView {
@@ -19,7 +21,7 @@ struct SongDetailView: View {
 
                 //Different pare using, 7 equal to Only believe book that contains specials markdown
                 if(book.id == 7 ) {
-                    parseMarkdownLike(song.content)
+                    song.content.parseMarkdownLike()
                         .reduce(Text(""), +) // Combine array of Text into a single Text
                         .font(.system(size: 22)) // increase font size
                                 .lineSpacing(4)
@@ -35,6 +37,18 @@ struct SongDetailView: View {
         .scrollIndicators(.hidden)
         .navigationTitle("N° \(song.number)")
         .background(BgImageGradient())
+        .toolbar(.hidden, for: .tabBar)
+        .toolbar {
+                    Button(action: {
+                        favoriteManager.toggleFavorite(book: book, song: song)
+                                
+                    }) {
+                        Image(systemName: favoriteManager.isFavorite(book: book, song: song) ? "heart.fill" : "heart")
+                            .foregroundColor(.red)
+                    }
+                }
     }
+    
 }
+
 

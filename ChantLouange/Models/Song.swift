@@ -11,6 +11,7 @@ struct Song: Identifiable, Codable {
     let title: String
     let number: String
     let content: String
-    var id: UUID { UUID() } // For SwiftUI Identifiable
+    //var id: UUID { UUID() } // For SwiftUI Identifiable
+    var id: Int
 }
 

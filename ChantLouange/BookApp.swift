@@ -14,41 +14,7 @@ import CoreImage
 @main
 struct ChantLouangeBookApp: App {
     
-    //init() {
-    //        // Transparent nav bar (when scrolling, background visible)
-    //        let transparent = UINavigationBarAppearance()
-    //        transparent.configureWithTransparentBackground()
-    //        transparent.backgroundColor = .clear
-    //        transparent.titleTextAttributes = [.foregroundColor: UIColor.black]
-    //        transparent.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-    //
-    //        // Flat tinted nav bar (when scrolled to top)
-    //        let tinted = UINavigationBarAppearance()
-    //        tinted.configureWithOpaqueBackground()
-    //        tinted.backgroundColor = UIColor.black.withAlphaComponent(0.6) // subtle black tint
-    //        // Or red tint:
-    //        // tinted.backgroundColor = UIColor.red.withAlphaComponent(0.5)
-    //        tinted.titleTextAttributes = [.foregroundColor: UIColor.white]
-    //        tinted.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-    //        //tinted.backgroundEffect = nil
-    //        // Apply globally
-    //        UINavigationBar.appearance().standardAppearance = tinted
-    //        UINavigationBar.appearance().compactAppearance = tinted
-    //        UINavigationBar.appearance().scrollEdgeAppearance = transparent
-    //        //appearance.backgroundEffects = nil
-    ////
-    ////        // Global NavigationBar customization
-    ////               let appearance = UINavigationBarAppearance()
-    ////               appearance.configureWithTransparentBackground()
-    ////               appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-    ////               appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-    ////        appearance.backgroundEffect = nil
-    ////        appearance.backgroundColor = .clear
-    ////               UINavigationBar.appearance().tintColor = UIColor.systemIndigo   // Global back button color
-    ////               UINavigationBar.appearance().standardAppearance = appearance
-    ////               UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    ////
-    //   }
+   
     init() {
         var avgColor: UIColor = .black
         if let bgImage = UIImage(named: "bg"),
@@ -60,24 +26,52 @@ struct ChantLouangeBookApp: App {
             avgColor = color
         }
         
-        // 🔹 Clear (transparent) appearance for top edge (before scroll)
+        // Clear (transparent) appearance for top edge (before scroll)
         let clearAppearance = UINavigationBarAppearance()
         clearAppearance.configureWithTransparentBackground()
         clearAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         clearAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         
-        // 🔹 Colored appearance for scrolled state
+        // Colored appearance for scrolled state
         let coloredAppearance = UINavigationBarAppearance()
         coloredAppearance.configureWithOpaqueBackground()
         coloredAppearance.backgroundColor = avgColor
         coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         
-        // 🔹 Apply globally
+        // Apply globally
         UINavigationBar.appearance().tintColor = .systemIndigo
         UINavigationBar.appearance().standardAppearance = coloredAppearance   // When scrolled
         UINavigationBar.appearance().compactAppearance = coloredAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = clearAppearance   // At top, before scroll
+        
+        
+        //Tab
+        
+        // Customize tab bar globally
+                let appearance = UITabBarAppearance()
+                appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = avgColor.withAlphaComponent(0.4)//UIColor.black.withAlphaComponent(0.4) // dark background
+
+                // Normal state (unselected) → white
+                let normalAttributes: [NSAttributedString.Key: Any] = [
+                    .foregroundColor: UIColor.white
+                ]
+                appearance.stackedLayoutAppearance.normal.iconColor = .white
+                appearance.stackedLayoutAppearance.normal.titleTextAttributes = normalAttributes
+
+                // Selected state → red
+                let selectedAttributes: [NSAttributedString.Key: Any] = [
+                    .foregroundColor: UIColor.red
+                ]
+                appearance.stackedLayoutAppearance.selected.iconColor = .red
+                appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttributes
+
+                // Apply appearance
+                UITabBar.appearance().standardAppearance = appearance
+                if #available(iOS 15.0, *) {
+                    UITabBar.appearance().scrollEdgeAppearance = appearance
+                }
         
     }
     @StateObject private var bookData = BookData()
