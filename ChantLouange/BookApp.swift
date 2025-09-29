@@ -49,29 +49,43 @@ struct ChantLouangeBookApp: App {
         //Tab
         
         // Customize tab bar globally
-                let appearance = UITabBarAppearance()
-                appearance.configureWithOpaqueBackground()
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        
         appearance.backgroundColor = avgColor.withAlphaComponent(0.4)//UIColor.black.withAlphaComponent(0.4) // dark background
-
-                // Normal state (unselected) → white
-                let normalAttributes: [NSAttributedString.Key: Any] = [
-                    .foregroundColor: UIColor.white
-                ]
-                appearance.stackedLayoutAppearance.normal.iconColor = .white
-                appearance.stackedLayoutAppearance.normal.titleTextAttributes = normalAttributes
-
-                // Selected state → red
-                let selectedAttributes: [NSAttributedString.Key: Any] = [
-                    .foregroundColor: UIColor.red
-                ]
-                appearance.stackedLayoutAppearance.selected.iconColor = .red
-                appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttributes
-
-                // Apply appearance
-                UITabBar.appearance().standardAppearance = appearance
-                if #available(iOS 15.0, *) {
-                    UITabBar.appearance().scrollEdgeAppearance = appearance
-                }
+        
+        // Normal state (unselected) → white
+        let normalAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.white
+        ]
+        appearance.stackedLayoutAppearance.normal.iconColor = .white
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = normalAttributes
+        
+        // Selected state → red
+        let selectedAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.red
+        ]
+        appearance.stackedLayoutAppearance.selected.iconColor = .red
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttributes
+        
+        // Apply appearance
+        UITabBar.appearance().standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
+        
+        //SearchBar theme
+        let appearanceSearchBar = UISearchBar.appearance()
+        //appearanceSearchBar.searchTextField.backgroundColor = .clear
+        appearanceSearchBar.searchTextField.layer.borderWidth = 1
+        appearanceSearchBar.searchTextField.layer.borderColor = UIColor.white.cgColor
+        appearanceSearchBar.searchTextField.layer.cornerRadius = 8
+        appearanceSearchBar.searchTextField.layer.backgroundColor = UIColor.red.cgColor
+        appearanceSearchBar.searchTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Search songs",
+                    attributes: [.foregroundColor: UIColor.white]
+                )
+        appearanceSearchBar.searchTextField.textColor = .white
         
     }
     @StateObject private var bookData = BookData()

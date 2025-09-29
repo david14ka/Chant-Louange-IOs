@@ -1,0 +1,13 @@
+{
+  "abbreviation": "CE",
+  "author": "CE",
+  "bookComingSoon": true,
+  "id": 7,
+  "image": "CE",
+  "title": "Chant d’Esperance",
+  "songs": [
+      {"id": 1, "number": "1", "title": "ONLY BELIEVE (C)", "content": "Fear not"}
+      
+    ]
+
+}

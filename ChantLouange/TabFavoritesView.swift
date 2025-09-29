@@ -49,25 +49,30 @@ struct TabFavoritesView: View {
                                         // Song number
                                         Text("\(song.number)")
                                             .font(.subheadline)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(.secondary)
+                                            //.fontWeight(.thin)
+                                            .foregroundColor(.white)
                                         
                                         // Song title (1 line only)
                                         Text(song.title)
-                                            .font(.body)
+                                            //.font(.subheadline)
                                             .lineLimit(1)
+                                            //.fontWeight(.thin)
                                             .truncationMode(.tail)
-                                            .foregroundColor(.primary)
+                                            .foregroundColor(.white)
+                                        
+                                        Spacer()
                                     }
                                     
                                 }
+                                .listRowBackground(Color.clear) // Makes row background transparent
                             }
                         }
                     }
                 }
-            }
+                .scrollContentBackground(.hidden) // Hides default List background
+            }.padding(.bottom)
             .scrollContentBackground(.hidden)
-            .navigationTitle("Favorites")
+            .navigationTitle("Favorites songs")
             .background(BgImageGradient())
         }
     }

@@ -51,13 +51,13 @@ struct SplashScreenView: View {
             
                 
                 .onAppear {
-                    withAnimation(.easeIn(duration: 3.0)) {
+                    withAnimation(.easeIn(duration: 2.0)) {
                         opacity = 1.0
                     }
                     
                     // Delay before fade transition
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                        withAnimation(.easeInOut(duration: 3.0)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        withAnimation(.easeInOut(duration: 2.0)) {
                             isActive = true
                         }
                     }

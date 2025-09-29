@@ -15,7 +15,7 @@ struct BookMainView: View {
     var body: some View {
         
         TabView {
-            TabBooksView(bookData: bookData) // ✅ Pass instance, not type
+            TabBooksView(bookData: bookData)
                 .environmentObject(favoriteManager)
                 .tabItem {
                     Image(systemName: "music.note.list")

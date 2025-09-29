@@ -16,12 +16,21 @@ struct TabInfoView: View {
                 // App Information
                 Section(header: Text("App Information")) {
                     HStack {
-                        Image(systemName: "app.fill")
-                            .foregroundColor(.red)
-                        VStack(alignment: .leading) {
+                        Image("bg")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 50, height: 50)
+                            .clipShape(Circle()) // round shape
+                            .overlay(
+                                Circle().stroke(Color.white, lineWidth: 3) // optional white border
+                            )
+                            .shadow(radius: 10) // soft shadow
+                            
+                        VStack(alignment: .center) {
                             Text("Chant & Louange")
                                 .font(.headline)
                                 .foregroundColor(.white)
+                                
                             Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
                                 .font(.subheadline)
                                 .foregroundColor(.white)
@@ -31,6 +40,7 @@ struct TabInfoView: View {
                         .font(.footnote)
                         .foregroundColor(.white)
                         .padding(.top, 4)
+                        
                 }
                 .foregroundColor(.white)
                 .listRowBackground(Color.clear)

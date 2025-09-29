@@ -54,7 +54,7 @@ struct SongListView: View {
         }
         .background(BgImageGradient())
         .navigationTitle(book.title)
-        .searchable(text: $searchText, prompt: "Search songs")
+        .searchable(text: $searchText, prompt: "Search songs").background(Color(.white))
         .toolbar(.hidden, for: .tabBar)
     
     }

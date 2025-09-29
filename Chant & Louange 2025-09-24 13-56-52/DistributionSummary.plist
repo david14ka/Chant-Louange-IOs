@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ChantLouange.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>BCBAE2A75A0B5484C0F74C27E01278860A529338</string>
+				<key>dateExpires</key>
+				<string>9/15/26</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>X5SJV446UG.org.alivecorp.chantlouange</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>X5SJV446UG</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>ChantLouange.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>7d2d35b9-55ce-4783-a105-6c665061eda2</string>
+				<key>dateExpires</key>
+				<string>9/15/26</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: org.alivecorp.chantlouange</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>X5SJV446UG</string>
+				<key>name</key>
+				<string>David Kazad</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>2.3</string>
+		</dict>
+	</array>
+</dict>
+</plist>

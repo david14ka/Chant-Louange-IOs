@@ -51,7 +51,7 @@ struct BookListView: View {
                 }
                 
             }
-            .navigationTitle("Receuils")
+            .navigationTitle("Books")
         }
     }
 }

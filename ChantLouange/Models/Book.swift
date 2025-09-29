@@ -16,6 +16,6 @@ struct Book: Identifiable, Codable {
     let id: Int
     
     static public func emptyBookData() -> Book{
-        return Book(title: "Other books", author: "NB-", songs: [], id: 0)
+        return Book(title: "Other books", author: "Other_books", songs: [], id: 0)
     }
 }
