@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DF02118B2E70A46F0069B663"
-               BuildableName = "ChantLouange.app"
-               BlueprintName = "ChantLouange"
+               BuildableName = "ccantiques.app"
+               BlueprintName = "ccantiques"
                ReferencedContainer = "container:ChantLouange.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -36,8 +36,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DF02119B2E70A4710069B663"
-               BuildableName = "ChantLouangeTests.xctest"
-               BlueprintName = "ChantLouangeTests"
+               BuildableName = "ccantiquesTests.xctest"
+               BlueprintName = "ccantiquesTests"
                ReferencedContainer = "container:ChantLouange.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DF0211A52E70A4710069B663"
-               BuildableName = "ChantLouangeUITests.xctest"
-               BlueprintName = "ChantLouangeUITests"
+               BuildableName = "ccantiquesUITests.xctest"
+               BlueprintName = "ccantiquesUITests"
                ReferencedContainer = "container:ChantLouange.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -69,8 +69,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DF02118B2E70A46F0069B663"
-            BuildableName = "ChantLouange.app"
-            BlueprintName = "ChantLouange"
+            BuildableName = "ccantiques.app"
+            BlueprintName = "ccantiques"
             ReferencedContainer = "container:ChantLouange.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -86,8 +86,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DF02118B2E70A46F0069B663"
-            BuildableName = "ChantLouange.app"
-            BlueprintName = "ChantLouange"
+            BuildableName = "ccantiques.app"
+            BlueprintName = "ccantiques"
             ReferencedContainer = "container:ChantLouange.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
